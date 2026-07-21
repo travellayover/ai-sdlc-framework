@@ -1,0 +1,54 @@
+{
+  "name": "ai-sdlc-framework",
+  "version": "0.1.0",
+  "description": "Apache 2.0 open-source framework for building regulatory compliance (SOC 2, HIPAA, ISO 42001) and quality gates directly into AI coding agent pipelines.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "ai-sdlc": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "controls",
+    "PHILOSOPHY.md",
+    "PRODUCT.md",
+    "SCOPE.md",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "verify": "npm run lint && npm run test",
+    "dev": "tsx src/cli.ts"
+  },
+  "keywords": [
+    "ai",
+    "sdlc",
+    "compliance",
+    "soc2",
+    "hipaa",
+    "iso42001",
+    "ai-coding-agent",
+    "audit-log",
+    "quality-gates"
+  ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "yaml": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
