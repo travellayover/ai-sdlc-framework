@@ -106,17 +106,6 @@ const STUBS: StubDef[] = [
   },
   {
     control: {
-      id: "HIPAA §164.312(b)",
-      title: "Audit controls",
-      pillar: "audit-trail",
-      status: "stub",
-      spec: "Hardware, software, and procedural mechanisms are in place to record and examine activity.",
-      evidenceSource: "the framework's own audit log",
-      stubSpec: "Would verify audit/ is populated, signed, and tamper-evident.",
-    },
-  },
-  {
-    control: {
       id: "HIPAA §164.312(c)(1)",
       title: "Integrity",
       pillar: "code-integrity",

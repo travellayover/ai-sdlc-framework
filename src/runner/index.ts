@@ -3,6 +3,8 @@
  * and produces a compliance report.
  */
 
+// Side-effect imports: register all gates by importing the index module
+import "../index.js";
 import { listGates } from "../gates/index.js";
 import { detectAgentIdentity } from "../identity/detect.js";
 import { PILLAR_WEIGHT } from "../types/pillar.js";

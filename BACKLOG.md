@@ -40,7 +40,7 @@ Per PHILOSOPHY §1, no "tracked" / "in progress" / "scheduled" — the framework
 | BF-002 | HIPAA §164.312(a)(2)(i) (unique user) | 5 | 5 | 1 | 9 | **DONE** | done | First sample gate. Verified end-to-end. |
 | BF-003 | ISO 42001 A.6.1.2 (AI lifecycle) | 5 | 5 | 1 | 9 | **DONE** | done | First sample gate. Verified end-to-end. |
 | BF-004 | SOC 2 CC7.1 (system monitoring) | 4 | 4 | 2 | 8 | **NOT STARTED** | — | Stub. Detects log infrastructure, retention, integrity. Blocks most SOC 2 audits. |
-| BF-005 | HIPAA §164.312(b) (audit controls) | 5 | 4 | 3 | 7 | **NOT STARTED** | — | Stub. Verifies the framework\'s own audit log is in use. After this, the framework dogfoods its own audit control. |
+| BF-005 | HIPAA §164.312(b) (audit controls) | 5 | 4 | 3 | 7 | **DONE** | lane/bf-005-audit-controls | Stub → IMPLEMENTED. Dogfoods the framework's own audit log: verifies audit/ exists, has entries, signs them, chain verifies. |
 | BF-006 | SOC 2 CC8.1 (change management) | 5 | 4 | 3 | 7 | **NOT STARTED** | — | Stub. PR template verification. Common ask from SOC 2 auditors. |
 
 ### Tier 2: High (R = 3-4) — Implement in v0.1.1
