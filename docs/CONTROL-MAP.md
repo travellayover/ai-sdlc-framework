@@ -16,7 +16,7 @@ The 18 compliance controls in v0.1, grouped by pillar and mapped to their regula
 | Control ID | Status | Description | Regulatory anchor |
 |---|---|---|---|
 | ISO 42001 A.6.1.2 | IMPLEMENTED | AI system lifecycle documented (F0-F8 or similar) | ISO 42001 A.6.1.2 |
-| SOC 2 CC8.1 | STUB | Change management process (PR template with risk fields) | SOC 2 CC8.1 |
+| SOC 2 CC8.1 | IMPLEMENTED | Change management process (PR template with required Risk/Rollback/Reviewer sections + CODEOWNERS) | SOC 2 CC8.1 |
 | HIPAA §164.308(a)(1)(ii)(A) | STUB | Risk analysis (documented periodically) | HIPAA §164.308 |
 | ISO 42001 A.5.2 | STUB | AI policy (documented and approved) | ISO 42001 A.5.2 |
 

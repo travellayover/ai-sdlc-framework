@@ -71,17 +71,7 @@ const STUBS: StubDef[] = [
       stubSpec: "Would verify a CI rule that flags high-volume or unusual agent actions.",
     },
   },
-  {
-    control: {
-      id: "SOC 2 CC8.1",
-      title: "Change management process",
-      pillar: "change-management",
-      status: "stub",
-      spec: "All changes follow a documented change management process with risk assessment.",
-      evidenceSource: "PR template requiring risk assessment fields",
-      stubSpec: "Would verify PR template includes risk fields, rollback plan, and reviewer.",
-    },
-  },
+
   {
     control: {
       id: "SOC 2 CC9.1",

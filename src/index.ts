@@ -5,6 +5,7 @@
 
 // Register all gates (side effects)
 import "./gates/soc2/cc6.1-logical-access.js";
+import "./gates/soc2/cc8.1-change-management.js";
 import "./gates/hipaa/164.312a2i-unique-user.js";
 import "./gates/hipaa/164.312b-audit-controls.js";
 import "./gates/iso42001/a.6.1.2-lifecycle.js";
