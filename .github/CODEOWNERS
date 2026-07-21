@@ -1,0 +1,17 @@
+# CODEOWNERS for ai-sdlc-framework
+# Per CC8.1 (change management), all changes require gate-lane review.
+# Per the framework's own PHILOSOPHY §1, the gate lane is a stronger
+# model or a human reviewer. For v0.1.x, the gate lane is the user
+# (the framework's product owner). For v0.2+, the steering committee
+# will own the gate-lane role.
+
+# Default: require review
+*       @travellayover
+
+# Gate scripts and audit log: critical for compliance
+/scripts/  @travellayover
+/src/audit/ @travellayover
+/src/gates/ @travellayover
+
+# CI workflow
+/.github/  @travellayover

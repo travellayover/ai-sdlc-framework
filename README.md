@@ -14,6 +14,8 @@ A TypeScript framework that:
 4. **Integrates** with CI providers and AI coding agents
 5. **Does not, by itself, constitute compliance.** Certification requires an external auditor.
 
+> **CI:** every push and PR runs `npm run verify` + the framework's self-audit. See `.github/workflows/verify.yml`.
+
 ## Status
 
 **v0.1 (in development).** See IMPLEMENTATION-PLAN.md.
