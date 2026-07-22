@@ -86,7 +86,7 @@ describe("Gate runner", () => {
     expect(report.pillars.length).toBe(5);
     // Pillar distribution:
     //   identity-and-access: 1 implemented (CC6.1) + 3 stubs (CC6.2, CC6.3, A.5.3) = 4
-    //   change-management:   1 implemented (A.6.1.2) + 3 stubs (CC8.1, 164.308a1, A.5.2) = 4
+    //   change-management:   2 implemented (A.6.1.2, CC8.1) + 2 stubs (164.308a1, A.5.2) = 4
     //   code-integrity:      1 implemented (164.312a2i) + 3 stubs (CC7.1, 164.312c, CC7.3) = 4
     //   operational-trust:   0 implemented + 3 stubs (CC7.2, CC9.1, A.7.1) = 3
     //   audit-trail:         1 implemented (164.312b) + 2 stubs (A.9.4, A.9.5) = 3
