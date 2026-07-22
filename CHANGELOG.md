@@ -71,6 +71,43 @@ cat /tmp/report/report-$(date -u +%Y-%m-%d).md
 
 ## v0.1.1 — planned, target 2026-08-04 (2 weeks)
 
+**Status:** Lanes 1-7 implemented in PRs #1-#6. NPM publish blocked on user sign-off.
+
+### What ships in v0.1.1
+
+- **4 additional implemented controls** (BF-005, BF-006, BF-009, BF-011): HIPAA §164.312(b), SOC 2 CC8.1, ISO 42001 A.5.3, ISO 42001 A.5.2
+- **Total implemented: 7/18** (39%)
+- **GitHub Actions verify workflow** for the framework itself
+- **GitHub Actions example for consumers** (layover.ing integration, Layer 2: blocking-on-merge)
+- **`--min-score` flag** on `ai-sdlc run` (exit 1 if TrustScore < minimum)
+- **Release script** (`scripts/release.sh`) for version bumps, tags, and publish
+- **CODEOWNERS + PR template** for the framework itself (CC8.1 dogfooding)
+
+### How to publish
+
+```bash
+./scripts/release.sh patch    # 0.1.0 -> 0.1.1
+# or for a specific version
+./scripts/release.sh 0.1.1
+```
+
+The release script:
+1. Bumps the version
+2. Runs `npm run verify` (must pass)
+3. Builds (`npm run build`)
+4. Tags and pushes (`v0.1.1`)
+5. Waits for user confirmation before `npm publish --access public`
+
+The user (product owner) is prompted before the actual publish.
+
+### What does NOT ship in v0.1.1 (deferred)
+
+- 8 more stub controls (target v0.1.1.1 → v1.0)
+- Vercel deploy hook for layover.ing (target v0.2)
+- Steering committee (target v1.0)
+- SOC 2 Type II certification (target v1.0+)
+
+
 **Scope (from BACKLOG.md):** 4 more implemented controls (BF-005, BF-006, BF-009, BF-011), layover.ing integration (Layer 2: blocking-on-merge), npm publish, CI workflow. ~700 lines, 8 lanes. **NOT YET STARTED.**
 
 ## v0.2 — planned, target 2026-09-01 (4 weeks)
