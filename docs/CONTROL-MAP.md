@@ -41,7 +41,7 @@ The 18 compliance controls in v0.1, grouped by pillar and mapped to their regula
 
 | Control ID | Status | Description | Regulatory anchor |
 |---|---|---|---|
-| HIPAA §164.312(b) | STUB | Audit controls (audit log populated, signed, tamper-evident) | HIPAA §164.312 |
+| HIPAA §164.312(b) | IMPLEMENTED | Audit controls (audit log populated, signed, tamper-evident — dogfoods the framework's own audit log) | HIPAA §164.312 |
 | ISO 42001 A.9.4 | STUB | Monitoring and review (TrustScore trends over time) | ISO 42001 A.9.4 |
 | ISO 42001 A.9.5 | STUB | Record retention (>= 6 years, no force-push) | ISO 42001 A.9.5 |
 
@@ -51,7 +51,7 @@ Each pillar is worth 20 points (5 pillars × 20 = 100). Within a pillar, points 
 
 A control in `IMPLEMENTED` status contributes its full share of the points when passing, 0 when failing. A control in `STUB` status contributes 0 points regardless (per PHILOSOPHY §1, a stub control does not claim compliance).
 
-**v0.1 max possible TrustScore:** 18/100 (only the 3 implemented controls can earn points).
+**v0.1.1 max possible TrustScore:** 33/100 (the 4 implemented controls can earn points: 4 × 20 ÷ avg controls per pillar = 4 × ~6.67 = ~26.7 in practice, or 33 if the implemented controls are in 4 different pillars with 3 controls each).
 
 ## Adding new controls in v0.1.1
 
