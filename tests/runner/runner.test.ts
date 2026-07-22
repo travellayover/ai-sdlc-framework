@@ -42,15 +42,15 @@ describe("Gate runner", () => {
     rmSync(dir, { recursive: true, force: true });
   });
 
-  it("runs all 18 gates (6 implemented + 12 stubs)", async () => {
+  it("runs all 18 gates (7 implemented + 11 stubs)", async () => {
     const report = await run({
       target: dir,
       outputDir,
       frameworkVersion: "0.1.0",
     });
     expect(report.totalControls).toBe(18);
-    expect(report.notImplementedControls).toBe(12);
-    expect(report.passingControls + report.failingControls).toBe(6);
+    expect(report.notImplementedControls).toBe(11);
+    expect(report.passingControls + report.failingControls).toBe(7);
   });
 
   it("produces JSON and markdown reports", async () => {
@@ -89,7 +89,7 @@ describe("Gate runner", () => {
     //   change-management:   3 implemented (A.5.2, A.6.1.2, CC8.1) + 1 stub (164.308a1) = 4
     //   code-integrity:      1 implemented (164.312a2i) + 3 stubs (CC7.1, 164.312c, CC7.3) = 4
     //   operational-trust:   0 implemented + 3 stubs (CC7.2, CC9.1, A.7.1) = 3
-    //   audit-trail:         1 implemented (164.312b) + 2 stubs (A.9.4, A.9.5) = 3
+    //   audit-trail:         0 implemented + 3 stubs (164.312b, A.9.4, A.9.5) = 3
     //   Total: 18 controls
     const counts: Record<string, number> = {};
     for (const p of report.pillars) {

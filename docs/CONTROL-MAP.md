@@ -9,7 +9,7 @@ The 18 compliance controls in v0.1, grouped by pillar and mapped to their regula
 | SOC 2 CC6.1 | IMPLEMENTED | No direct commits to master (lane protocol) | SOC 2 CC6.1 |
 | SOC 2 CC6.2 | STUB | Prior authorization for access (audit log entries) | SOC 2 CC6.2 |
 | SOC 2 CC6.3 | STUB | Access removal on termination (identity registry) | SOC 2 CC6.3 |
-| ISO 42001 A.5.3 | STUB | Segregation of duties (distinct agents for write/review/deploy) | ISO 42001 A.5.3 |
+| ISO 42001 A.5.3 | IMPLEMENTED | Segregation of duties (distinct agents for write/review/deploy, checked via audit log) | ISO 42001 A.5.3 |
 
 ## Pillar 2: Change Management (4 controls)
 

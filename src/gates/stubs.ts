@@ -38,17 +38,7 @@ const STUBS: StubDef[] = [
       stubSpec: "Would scan identity registry for retired agents without retiredAt.",
     },
   },
-  {
-    control: {
-      id: "ISO 42001 A.5.3",
-      title: "Segregation of duties",
-      pillar: "identity-and-access",
-      status: "stub",
-      spec: "The agent that writes code is not the agent that reviews or deploys it.",
-      evidenceSource: "audit log showing distinct agents for write, review, deploy",
-      stubSpec: "Would scan audit/ for the same agent ID across write+review+deploy.",
-    },
-  },
+
   {
     control: {
       id: "SOC 2 CC7.1",
