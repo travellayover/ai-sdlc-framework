@@ -1,0 +1,49 @@
+name: ai-sdlc
+
+# This is an example workflow for consumers of the ai-sdlc-framework.
+# It runs the framework on every PR and blocks the merge if the
+# TrustScore is below the minimum.
+#
+# To use this in a consumer repo:
+# 1. Copy this file to .github/workflows/ai-sdlc.yml in the consumer repo
+# 2. Set up `npm install ai-sdlc-framework` in package.json
+# 3. Adjust `min-score` as needed (the framework's own v0.1.1 default is 10)
+# 4. Set `target` to the consumer's repo root (defaults to `.`)
+
+on:
+  pull_request:
+    branches: [master, main]
+  push:
+    branches: [master, main]
+
+jobs:
+  ai-sdlc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ai-sdlc-framework
+        run: |
+          npx ai-sdlc init --target .
+          npx ai-sdlc run --target . --output .ai-sdlc --min-score 10
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-sdlc-report
+          path: .ai-sdlc/
+          retention-days: 30

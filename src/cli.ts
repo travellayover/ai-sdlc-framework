@@ -62,6 +62,7 @@ program
   .option("-t, --target <path>", "target directory", ".")
   .option("-p, --pillar <pillar>", "run only one pillar")
   .option("-o, --output <path>", "output directory", "./.ai-sdlc")
+  .option("--min-score <score>", "minimum TrustScore required (0-100); exits non-zero if below", "0")
   .action(async (opts) => {
     const report = await run({
       target: opts.target,
@@ -85,6 +86,11 @@ program
         total: report.totalControls,
       },
     });
+    const minScore = parseInt(opts.minScore, 10);
+    if (!isNaN(minScore) && report.trustScore < minScore) {
+      console.error(`TrustScore ${String(report.trustScore)} is below the minimum ${String(minScore)}`);
+      process.exit(1);
+    }
   });
 
 program
