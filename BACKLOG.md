@@ -51,7 +51,7 @@ Per PHILOSOPHY §1, no "tracked" / "in progress" / "scheduled" — the framework
 | BF-008 | SOC 2 CC6.3 (access removal) | 4 | 3 | 3 | 6 | **NOT STARTED** | — | Stub. Identity registry. |
 | BF-009 | ISO 42001 A.5.3 (segregation of duties) | 4 | 3 | 3 | 6 | **NOT STARTED** | — | Stub. Distinct agents for write/review/deploy. |
 | BF-010 | HIPAA §164.308(a)(1)(ii)(A) (risk analysis) | 4 | 3 | 3 | 6 | **NOT STARTED** | — | Stub. Periodic risk analysis. |
-| BF-011 | ISO 42001 A.5.2 (AI policy) | 4 | 3 | 2 | 7 | **NOT STARTED** | — | Stub. Signed AI policy. |
+| BF-011 | ISO 42001 A.5.2 (AI policy) | 4 | 3 | 2 | 7 | **DONE** | lane/bf-011-ai-policy | Stub → IMPLEMENTED. Verifies docs/AI-POLICY.md exists, has approval line + date within 365 days. |
 | BF-012 | HIPAA §164.312(c)(1) (integrity) | 4 | 2 | 3 | 5 | **NOT STARTED** | — | Stub. SHA-256 checksums. |
 | BF-013 | SOC 2 CC7.2 (anomaly detection) | 3 | 3 | 4 | 4 | **NOT STARTED** | — | Stub. CI rule for unusual agent activity. |
 | BF-014 | SOC 2 CC9.1 (risk mitigation) | 3 | 3 | 3 | 5 | **NOT STARTED** | — | Stub. Risk register. |

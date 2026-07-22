@@ -116,17 +116,7 @@ const STUBS: StubDef[] = [
       stubSpec: "Would verify an incident response plan exists and recent incidents have postmortems.",
     },
   },
-  {
-    control: {
-      id: "ISO 42001 A.5.2",
-      title: "AI policy",
-      pillar: "change-management",
-      status: "stub",
-      spec: "An AI policy is documented and approved by leadership.",
-      evidenceSource: "docs/AI-POLICY.md with approver signature",
-      stubSpec: "Would verify a signed AI policy exists and is current.",
-    },
-  },
+
   {
     control: {
       id: "ISO 42001 A.7.1",
